@@ -49,7 +49,7 @@ jobs:
           dune-cache: true
 
       - name: Lint doc
-        uses: ocaml/setup-ocaml/lint-doc@v2
+        uses: ocaml/setup-ocaml/lint-doc@extends-ts
 
   lint-fmt:
     runs-on: ubuntu-latest
@@ -64,7 +64,7 @@ jobs:
           dune-cache: true
 
       - name: Lint fmt
-        uses: ocaml/setup-ocaml/lint-fmt@fix-lint-fmt
+        uses: ocaml/setup-ocaml/lint-fmt@extends-ts
 
   lint-opam:
     runs-on: ubuntu-latest
@@ -79,4 +79,4 @@ jobs:
           dune-cache: true
 
       - name: Lint opam
-        uses: ocaml/setup-ocaml/lint-opam@v2
+        uses: ocaml/setup-ocaml/lint-opam@extends-ts
